@@ -16,4 +16,14 @@
         public const string WorldList = "WORLDS";
 
     }
+
+    public class WorldState
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
+        public byte[,] Pixels { get; set; }
+        public Dictionary<string, int> PlayerScores { get; set; } = new();
+    }
 }
