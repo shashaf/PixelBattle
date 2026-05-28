@@ -85,6 +85,7 @@
             btnConnect.TabIndex = 3;
             btnConnect.Text = "Подключиться к серверу";
             btnConnect.UseVisualStyleBackColor = true;
+            btnConnect.Click += btnConnect_Click;
             // 
             // worldList
             // 
@@ -104,6 +105,7 @@
             btnJoin.TabIndex = 3;
             btnJoin.Text = "Зайти на мир";
             btnJoin.UseVisualStyleBackColor = true;
+            btnJoin.Click += btnJoin_Click;
             // 
             // btnCreate
             // 
@@ -114,6 +116,7 @@
             btnCreate.TabIndex = 3;
             btnCreate.Text = "Создать мир";
             btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
             // 
             // btnRefresh
             // 
@@ -124,6 +127,7 @@
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Обновить список миров";
             btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // panel1
             // 
