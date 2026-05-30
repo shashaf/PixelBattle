@@ -260,6 +260,10 @@
             lblCooldown.TabIndex = 1;
             lblCooldown.Text = "КД:";
             // 
+            // cooldownTimer
+            // 
+            cooldownTimer.Tick += cooldownTimer_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);

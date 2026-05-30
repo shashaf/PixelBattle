@@ -187,6 +187,15 @@ namespace ClientPB
                 canvas.Invalidate();
             }
         }
+
+        private void cooldownTimer_Tick(object sender, EventArgs e)
+        {
+            var elapsed = (DateTime.UtcNow - _lastPixelTime).TotalSeconds;
+            if (elapsed < 3)
+                lblCooldown.Text = $"КД: {(3 - elapsed):F1} сек";
+            else
+                lblCooldown.Text = "Готов к пикселю!";
+        }
     }
     class WorldItem 
     {
