@@ -61,6 +61,7 @@
             canvas.Size = new Size(571, 667);
             canvas.TabIndex = 0;
             canvas.Paint += canvas_Paint;
+            canvas.MouseClick += canvas_MouseClick;
             // 
             // label1
             // 

@@ -165,6 +165,28 @@ namespace ClientPB
                 }
             }
         }
+
+        private async void canvas_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (_currentWorld == null) return;
+
+            var x = e.X / _cellSize;
+            var y = e.Y / _cellSize;
+            if (x >= 0 && x < _currentWorld.Width && y >= 0 && y < _currentWorld.Height)
+            {
+                var now = DateTime.UtcNow;
+                if ((now - _lastPixelTime).TotalSeconds < 3)
+                {
+                    lblStatus.Text = $"Подождите {3 - (now - _lastPixelTime).TotalSeconds:F1} секунд";
+                    return;
+                }
+
+                await _writer.WriteLineAsync($"{ClientCommands.PlacePixel}|{_currentWorld.Id}|{x}|{y}|{_selectedColor}");
+                _lastPixelTime = now;
+                _currentWorld.Pixels[x, y] = (byte)_selectedColor;
+                canvas.Invalidate();
+            }
+        }
     }
     class WorldItem 
     {
