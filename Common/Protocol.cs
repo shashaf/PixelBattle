@@ -43,6 +43,6 @@ namespace Common
             Color.Cyan
         };
 
-        public static Color GetColor(byte index) => Colors[index % Colors.Length]
+        public static Color GetColor(byte index) => Colors[index % Colors.Length];
     }
 }
