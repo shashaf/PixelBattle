@@ -140,7 +140,7 @@ namespace ClientPB
 
         private async Task RequestWorldListWithRetry()
         {
-            for (int i = 0; i < 3; i++) 
+            for (int i = 0; i < 3; i++)
             {
                 await _writer.WriteLineAsync(ClientCommands.ListWorlds);
                 await Task.Delay(200);
@@ -149,6 +149,21 @@ namespace ClientPB
                     return;
             }
             lblStatus.Text = "Ќе удалось загрузить список миров после 3 попыток";
+        }
+
+        private void canvas_Paint(object sender, PaintEventArgs e)
+        {
+            if (_currentWorld?.Pixels == null) return;
+
+            for (int x = 0; x < _currentWorld.Width; x++)
+            {
+                for (int y = 0; y < _currentWorld.Height; y++)
+                {
+                    var color = ColorPalette.GetColor(_currentWorld.Pixels[x, y]);
+                    using var brush = new SolidBrush(color);
+                    e.Graphics.FillRectangle(brush, x * _cellSize, y * _cellSize, _cellSize, _cellSize);
+                }
+            }
         }
     }
     class WorldItem 

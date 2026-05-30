@@ -55,33 +55,37 @@
             // canvas
             // 
             canvas.BackColor = Color.Black;
-            canvas.Location = new Point(220, 40);
+            canvas.Location = new Point(251, 53);
+            canvas.Margin = new Padding(3, 4, 3, 4);
             canvas.Name = "canvas";
-            canvas.Size = new Size(500, 500);
+            canvas.Size = new Size(571, 667);
             canvas.TabIndex = 0;
+            canvas.Paint += canvas_Paint;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(14, 59);
+            label1.Location = new Point(16, 79);
             label1.Name = "label1";
-            label1.Size = new Size(64, 15);
+            label1.Size = new Size(82, 20);
             label1.TabIndex = 1;
             label1.Text = "IP сервера";
             // 
             // txtServerIP
             // 
-            txtServerIP.Location = new Point(84, 56);
+            txtServerIP.Location = new Point(96, 75);
+            txtServerIP.Margin = new Padding(3, 4, 3, 4);
             txtServerIP.Name = "txtServerIP";
-            txtServerIP.Size = new Size(130, 23);
+            txtServerIP.Size = new Size(148, 27);
             txtServerIP.TabIndex = 2;
             txtServerIP.Text = "127.0.0.1";
             // 
             // btnConnect
             // 
-            btnConnect.Location = new Point(14, 105);
+            btnConnect.Location = new Point(16, 140);
+            btnConnect.Margin = new Padding(3, 4, 3, 4);
             btnConnect.Name = "btnConnect";
-            btnConnect.Size = new Size(179, 23);
+            btnConnect.Size = new Size(205, 31);
             btnConnect.TabIndex = 3;
             btnConnect.Text = "Подключиться к серверу";
             btnConnect.UseVisualStyleBackColor = true;
@@ -91,17 +95,19 @@
             // 
             worldList.Enabled = false;
             worldList.FormattingEnabled = true;
-            worldList.Location = new Point(14, 191);
+            worldList.Location = new Point(16, 255);
+            worldList.Margin = new Padding(3, 4, 3, 4);
             worldList.Name = "worldList";
-            worldList.Size = new Size(200, 23);
+            worldList.Size = new Size(228, 28);
             worldList.TabIndex = 4;
             // 
             // btnJoin
             // 
             btnJoin.Enabled = false;
-            btnJoin.Location = new Point(14, 246);
+            btnJoin.Location = new Point(16, 328);
+            btnJoin.Margin = new Padding(3, 4, 3, 4);
             btnJoin.Name = "btnJoin";
-            btnJoin.Size = new Size(179, 23);
+            btnJoin.Size = new Size(205, 31);
             btnJoin.TabIndex = 3;
             btnJoin.Text = "Зайти на мир";
             btnJoin.UseVisualStyleBackColor = true;
@@ -110,9 +116,10 @@
             // btnCreate
             // 
             btnCreate.Enabled = false;
-            btnCreate.Location = new Point(14, 286);
+            btnCreate.Location = new Point(16, 381);
+            btnCreate.Margin = new Padding(3, 4, 3, 4);
             btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(179, 23);
+            btnCreate.Size = new Size(205, 31);
             btnCreate.TabIndex = 3;
             btnCreate.Text = "Создать мир";
             btnCreate.UseVisualStyleBackColor = true;
@@ -121,9 +128,10 @@
             // btnRefresh
             // 
             btnRefresh.Enabled = false;
-            btnRefresh.Location = new Point(14, 330);
+            btnRefresh.Location = new Point(16, 440);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(179, 23);
+            btnRefresh.Size = new Size(205, 31);
             btnRefresh.TabIndex = 3;
             btnRefresh.Text = "Обновить список миров";
             btnRefresh.UseVisualStyleBackColor = true;
@@ -139,18 +147,20 @@
             panel1.Controls.Add(btnColor2);
             panel1.Controls.Add(btnColor1);
             panel1.Controls.Add(btnColor0);
-            panel1.Location = new Point(746, 72);
+            panel1.Location = new Point(853, 96);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(359, 40);
+            panel1.Size = new Size(410, 53);
             panel1.TabIndex = 5;
             // 
             // btnColor7
             // 
             btnColor7.BackColor = Color.Cyan;
             btnColor7.FlatStyle = FlatStyle.Flat;
-            btnColor7.Location = new Point(290, 5);
+            btnColor7.Location = new Point(331, 7);
+            btnColor7.Margin = new Padding(3, 4, 3, 4);
             btnColor7.Name = "btnColor7";
-            btnColor7.Size = new Size(35, 30);
+            btnColor7.Size = new Size(40, 40);
             btnColor7.TabIndex = 0;
             btnColor7.UseVisualStyleBackColor = false;
             // 
@@ -158,9 +168,10 @@
             // 
             btnColor6.BackColor = Color.Magenta;
             btnColor6.FlatStyle = FlatStyle.Flat;
-            btnColor6.Location = new Point(249, 5);
+            btnColor6.Location = new Point(285, 7);
+            btnColor6.Margin = new Padding(3, 4, 3, 4);
             btnColor6.Name = "btnColor6";
-            btnColor6.Size = new Size(35, 30);
+            btnColor6.Size = new Size(40, 40);
             btnColor6.TabIndex = 0;
             btnColor6.UseVisualStyleBackColor = false;
             // 
@@ -168,9 +179,10 @@
             // 
             btnColor5.BackColor = Color.Yellow;
             btnColor5.FlatStyle = FlatStyle.Flat;
-            btnColor5.Location = new Point(208, 5);
+            btnColor5.Location = new Point(238, 7);
+            btnColor5.Margin = new Padding(3, 4, 3, 4);
             btnColor5.Name = "btnColor5";
-            btnColor5.Size = new Size(35, 30);
+            btnColor5.Size = new Size(40, 40);
             btnColor5.TabIndex = 0;
             btnColor5.UseVisualStyleBackColor = false;
             // 
@@ -178,9 +190,10 @@
             // 
             btnColor4.BackColor = Color.Blue;
             btnColor4.FlatStyle = FlatStyle.Flat;
-            btnColor4.Location = new Point(167, 5);
+            btnColor4.Location = new Point(191, 7);
+            btnColor4.Margin = new Padding(3, 4, 3, 4);
             btnColor4.Name = "btnColor4";
-            btnColor4.Size = new Size(35, 30);
+            btnColor4.Size = new Size(40, 40);
             btnColor4.TabIndex = 0;
             btnColor4.UseVisualStyleBackColor = false;
             // 
@@ -188,9 +201,10 @@
             // 
             btnColor3.BackColor = Color.Green;
             btnColor3.FlatStyle = FlatStyle.Flat;
-            btnColor3.Location = new Point(126, 5);
+            btnColor3.Location = new Point(144, 7);
+            btnColor3.Margin = new Padding(3, 4, 3, 4);
             btnColor3.Name = "btnColor3";
-            btnColor3.Size = new Size(35, 30);
+            btnColor3.Size = new Size(40, 40);
             btnColor3.TabIndex = 0;
             btnColor3.UseVisualStyleBackColor = false;
             // 
@@ -198,9 +212,10 @@
             // 
             btnColor2.BackColor = Color.Red;
             btnColor2.FlatStyle = FlatStyle.Flat;
-            btnColor2.Location = new Point(85, 5);
+            btnColor2.Location = new Point(97, 7);
+            btnColor2.Margin = new Padding(3, 4, 3, 4);
             btnColor2.Name = "btnColor2";
-            btnColor2.Size = new Size(35, 30);
+            btnColor2.Size = new Size(40, 40);
             btnColor2.TabIndex = 0;
             btnColor2.UseVisualStyleBackColor = false;
             // 
@@ -208,9 +223,10 @@
             // 
             btnColor1.BackColor = Color.White;
             btnColor1.FlatStyle = FlatStyle.Flat;
-            btnColor1.Location = new Point(44, 5);
+            btnColor1.Location = new Point(50, 7);
+            btnColor1.Margin = new Padding(3, 4, 3, 4);
             btnColor1.Name = "btnColor1";
-            btnColor1.Size = new Size(35, 30);
+            btnColor1.Size = new Size(40, 40);
             btnColor1.TabIndex = 0;
             btnColor1.UseVisualStyleBackColor = false;
             // 
@@ -218,35 +234,36 @@
             // 
             btnColor0.BackColor = Color.Black;
             btnColor0.FlatStyle = FlatStyle.Flat;
-            btnColor0.Location = new Point(3, 5);
+            btnColor0.Location = new Point(3, 7);
+            btnColor0.Margin = new Padding(3, 4, 3, 4);
             btnColor0.Name = "btnColor0";
-            btnColor0.Size = new Size(35, 30);
+            btnColor0.Size = new Size(40, 40);
             btnColor0.TabIndex = 0;
             btnColor0.UseVisualStyleBackColor = false;
             // 
             // lblStatus
             // 
             lblStatus.AutoSize = true;
-            lblStatus.Location = new Point(746, 199);
+            lblStatus.Location = new Point(853, 265);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(43, 15);
+            lblStatus.Size = new Size(52, 20);
             lblStatus.TabIndex = 1;
             lblStatus.Text = "Статус";
             // 
             // lblCooldown
             // 
             lblCooldown.AutoSize = true;
-            lblCooldown.Location = new Point(746, 227);
+            lblCooldown.Location = new Point(853, 303);
             lblCooldown.Name = "lblCooldown";
-            lblCooldown.Size = new Size(25, 15);
+            lblCooldown.Size = new Size(31, 20);
             lblCooldown.TabIndex = 1;
             lblCooldown.Text = "КД:";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 587);
+            ClientSize = new Size(1371, 783);
             Controls.Add(panel1);
             Controls.Add(worldList);
             Controls.Add(btnRefresh);
@@ -258,6 +275,7 @@
             Controls.Add(lblStatus);
             Controls.Add(label1);
             Controls.Add(canvas);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
